@@ -7,6 +7,8 @@ import {
     select,
     // eslint-disable-next-line import/no-unresolved
 } from '@storybook/addon-knobs';
+// @ts-ignore
+import { withInfo } from '@storybook/addon-info';
 // eslint-disable-next-line import/no-unresolved
 import { action } from '@storybook/addon-actions';
 import { Button, MaterialIcon } from '@deliveryhero/armor';
@@ -14,8 +16,10 @@ import { Button, MaterialIcon } from '@deliveryhero/armor';
 export default {
     title: 'Components/Button',
     component: Button,
-    decorators: [withKnobs],
-    parameters: {},
+    decorators: [withInfo, withKnobs],
+    parameters: {
+        info: {},
+    },
 };
 
 // const optionsTag = {
