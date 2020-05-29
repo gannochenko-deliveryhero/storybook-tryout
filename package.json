@@ -5,7 +5,8 @@
     "scripts": {
         "start": "start-storybook -p 6006 --ci",
         "build": "build-storybook -c .storybook -o .out",
-        "serve": "serve .out"
+        "serve": "serve .out",
+        "deploy": "storybook-to-ghpages"
     },
     "devDependencies": {
         "@storybook/addon-actions": "^5.3.14",
@@ -23,6 +24,7 @@
     },
     "dependencies": {
         "@deliveryhero/armor": "latest",
+        "@storybook/storybook-deployer": "^2.8.6",
         "babel-loader": "^8.1.0",
         "react-docgen-typescript-loader": "^3.7.2",
         "styled-components": "5.1.1",
