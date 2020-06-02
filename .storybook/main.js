@@ -1,13 +1,14 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-    stories: ['../content/**/*.story.tsx'],
+    stories: ['../content/**/*.story.(mdx|md)'],
     addons: [
-        '@storybook/addon-knobs/register',
-        '@storybook/addon-actions',
-        '@storybook/addon-links',
+        // '@storybook/addon-knobs/register',
+        // '@storybook/addon-actions',
+        // '@storybook/addon-links',
         'storybook-addon-styled-component-theme/dist/register',
-        '@storybook/addon-viewport/register',
+        // '@storybook/addon-viewport/register',
+        '@storybook/addon-docs',
     ],
     webpackFinal: async config => {
         config.module.rules.push({
