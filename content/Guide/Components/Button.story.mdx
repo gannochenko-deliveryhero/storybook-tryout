@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Button, MaterialIcon } from '@deliveryhero/armor';
+
+<Meta title="Guide/Components/Button" component={Button} />
+
+# Button
+
+Lalala topola
+
+<Preview>
+  <Story name="Primary">
+    <Button>
+        Primary
+    </Button>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="With icon">
+      <Button>
+          <MaterialIcon marginRight={2} icon="delete" />
+          Well hello there!
+      </Button>
+    </Story>
+</Preview>
