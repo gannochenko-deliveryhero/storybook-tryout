@@ -1,0 +1,123 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Button, MaterialIcon } from '@deliveryhero/armor';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { linkTo } from '@storybook/addon-links'
+
+<Meta title="Guide|Components/Button" component={Button} />
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+
+## Visual guide
+
+![Button visal guide](/Components/Button/visual.png)
+
+## Technical guide
+
+~~~
+import { Button } from '@deliveryhero/armor';
+~~~
+
+### Appearance
+
+<Preview>
+  <Story name="Appearance">
+    <div>
+        <Button marginRight={2}>Primary</Button>
+        <Button secondary marginRight={2}>Secondary</Button>
+        <Button tertiary marginRight={2}>Tertiary</Button>
+        <Button danger marginRight={2}>Danger</Button>
+    </div>
+  </Story>
+</Preview>
+
+### Size
+
+<Preview>
+  <Story name="Size">
+      <div>
+           <Button marginRight={2}>Regular</Button>
+           <Button small>Small</Button>
+      </div>
+  </Story>
+</Preview>
+
+### Wide
+
+<Preview>
+  <Story name="Wide">
+      <Button wide>I occupy the entire parent width</Button>
+  </Story>
+</Preview>
+
+### Link
+
+It is possible to use any tag as a button. For instance, it can be used together with `react-router`.
+
+~~~js
+import { BrowserRouter, Link } from 'react-router-dom';
+~~~
+
+<Preview>
+  <Story name="Link">
+      <BrowserRouter>
+           <Button tag="a" href="https://google.com" target="_blank" marginRight={2}>
+               Regular link
+           </Button>
+           <Button tag={Link} to="/homepage">
+               React router link
+           </Button>
+      </BrowserRouter>
+  </Story>
+</Preview>
+
+### Material icon
+
+<Preview>
+  <Story name="Material icon">
+      <div>
+           <Button marginRight={2}>
+               Edit
+               <MaterialIcon marginLeft={2}>edit</MaterialIcon>
+           </Button>
+           <Button marginRight={2}>
+               Edit
+               <MaterialIcon marginLeft={2} fontSize={22}>edit</MaterialIcon>
+           </Button>
+           <Button secondary marginRight={2}>
+               Save
+               <MaterialIcon marginLeft={2}>save</MaterialIcon>
+           </Button>
+           <Button tertiary marginRight={2}>
+               Add
+               <MaterialIcon marginLeft={2}>add</MaterialIcon>
+           </Button>
+           <Button tertiary marginRight={2}>
+               Add
+               <MaterialIcon marginLeft={2} fontSize={22} icon="add" />
+           </Button>
+           <Button primary marginRight={2}>
+               <MaterialIcon marginRight={2}>save</MaterialIcon>
+               Save
+           </Button>
+           <Button primary marginRight={2}>
+               <MaterialIcon marginRight={2} fontSize={22} icon="save" />
+               Save
+           </Button>
+      </div>
+  </Story>
+</Preview>
+
+## Properties
+
+// ToDo
+
+## DOM Nodes
+
+// ToDo
+
+## See also
+
+<button onClick={linkTo('Button', 'second')}>Go to "Second"</button>
+

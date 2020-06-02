@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Dialog, DialogTitle, DialogContent } from '@deliveryhero/armor';
+
+<Meta title="Guide|Components/Dialog" component={Dialog} />
+
+# Dialog
+
+<Preview>
+  <Story name="Appearance">
+    <Dialog
+        open={false}
+    >
+        <DialogTitle>
+            I have no effects
+        </DialogTitle>
+        <DialogContent>
+            1, 2, 3
+        </DialogContent>
+    </Dialog>
+  </Story>
+</Preview>
